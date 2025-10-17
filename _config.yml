@@ -1,0 +1,26 @@
+title: "EZYByte — Humanly Intelligent"
+description: "Insights, research, and updates from EZYByte"
+url: "https://blog.ezybyte.com"
+baseurl: ""
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: /:categories/:year/:month/:day/:title/
+timezone: UTC
+
+exclude:
+  - README.md
+  - node_modules
+  - scripts
+  - .github
+
+defaults:
+  - scope: {path: ""}
+    values:
+      image: /assets/img/ezybyte-logo.png
+
+exclude: [vendor]

@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Insights"
+description: "News, engineering notes, and product updates."
+---
+<section class="hero">
+  <div class="container">
+    <h1>EZYByte — Insights</h1>
+    <div class="tagline">News, engineering notes, and product updates.</div>
+  </div>
+</section>
+
+<section class="post-list container">
+  {% for post in site.posts %}
+  <div class="post-item">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <div class="muted">{{ post.date | date: "%Y-%m-%d" }}{% if post.author %} • {{ post.author }}{% endif %}</div>
+    {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 180 }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</section>
